@@ -1,7 +1,8 @@
 import subprocess
 import os
 import requests
-from bs4 import BeautifulSoup
+import luajit
+from bs4 import BeautifulSop
 
 print("LIB: Lua Python. By Pythonlua.org")
 
