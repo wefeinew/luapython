@@ -16,10 +16,6 @@ def run_lua_script(lua_cmd, *args):
         error_message = result.stderr.strip() if result.stderr else "An error occurred while executing the Lua script."
         raise RuntimeError(error_message)
 
-def execute_lua_code(code):
-    lua = lupa.LuaRuntime()
-    lua.execute(code)
-
 def search_luarocks(query):
     url = f"https://luarocks.org/search?q={query}"
     response = requests.get(url)
