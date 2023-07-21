@@ -2,7 +2,6 @@ import subprocess
 import os
 import requests
 import lupa
-from lupa import LuaRuntime
 from bs4 import BeautifulSop
 
 print("LIB: Lua Python. By Pythonlua.org")
