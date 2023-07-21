@@ -1,7 +1,8 @@
 import subprocess
 import os
 import requests
-import luapy
+import lupa
+from lupa import LuaRuntime
 from bs4 import BeautifulSop
 
 print("LIB: Lua Python. By Pythonlua.org")
@@ -10,14 +11,14 @@ def run_lua_script(lua_cmd, *args):
     result = subprocess.run(lua_cmd + list(args), capture_output=True, text=True, input=None if not args else '\n'.join(args))
     if result.returncode == 0:
         output = result.stdout.strip()
-        print(output)  # Вывод результата в консоль
+        print(output)
         return output
     else:
         error_message = result.stderr.strip() if result.stderr else "An error occurred while executing the Lua script."
         raise RuntimeError(error_message)
 
 def execute_lua_code(code):
-    lua = luapy.LuaState()
+    lua = lupa.LuaRuntime()
     lua.execute(code)
 
 def search_luarocks(query):
@@ -54,9 +55,9 @@ def lua_terminal():
 def get_lua_version():
     lua_cmd = ['Lua/lua.exe', '-v']
     process = subprocess.Popen(lua_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8')
-    output, error = process.communicate()  # Дождаться завершения процесса и получить вывод
+    output, error = process.communicate() 
     
-    if process.returncode != 0:  # Проверить код возврата процесса на наличие ошибок
+    if process.returncode != 0:
         error_message = error.strip() if error else "An error occurred while executing the Lua"
         raise RuntimeError(error_message)
     
@@ -72,7 +73,7 @@ def luacreate(script_name):
         if confirm.lower() != "y":
             return
     with open(script_path, "w") as f:
-        f.write("")  # Empty file
+        f.write("")
     print(f"Created file: {script_path}")
 
 def luarun(script_path, *args):
