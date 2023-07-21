@@ -1,13 +1,13 @@
 import subprocess
 import os
 
-print("LIB: Lua Python. By Pythonlua.org")
+print("LIB: Lua Python. By wefeinew Github and source file: https://github.com/wefeinew/luapython")
 
 def run_lua_script(lua_cmd, *args):
     result = subprocess.run(lua_cmd + list(args), capture_output=True, text=True, input=None if not args else '\n'.join(args))
     if result.returncode == 0:
         output = result.stdout.strip()
-        print(output)  # Вывод результата в консоль
+        print(output)
         return output
     else:
         error_message = result.stderr.strip() if result.stderr else "An error occurred while executing the Lua script."
@@ -20,9 +20,9 @@ def lua_terminal():
 def get_lua_version():
     lua_cmd = ['Lua/lua.exe', '-vef']
     process = subprocess.Popen(lua_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8')
-    output, error = process.communicate()  # Дождаться завершения процесса и получить вывод
+    output, error = process.communicate()
     
-    if process.returncode != 0:  # Проверить код возврата процесса на наличие ошибок
+    if process.returncode != 0: 
         error_message = error.strip() if error else "An error occurred while executing the Lua"
         raise RuntimeError(error_message)
     
