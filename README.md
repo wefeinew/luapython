@@ -28,8 +28,7 @@ search_luarocks("You module name")
 
 for execute lua code, but not have file:
 
-from luapython import lupa
-from lupa import LuaRuntime
+from luapython import LuaRuntime
 
 execute_lua_code('print("Hello, Lua!")')
 
