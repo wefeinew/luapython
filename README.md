@@ -26,12 +26,6 @@ from luapython import search_luarocks
 
 search_luarocks("You module name")
 
-for execute lua code, but not have file:
-
-from luapython import LuaRuntime
-
-execute_lua_code('print("Hello, Lua!")')
-
 ---------------------------------------------------------------------------------------------------
 requisition libraries:
-pip install requests beautifulsoup4 luapy
+pip install requests beautifulsoup4 lupa
