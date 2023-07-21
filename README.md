@@ -27,5 +27,4 @@ from luapython import search_luarocks
 search_luarocks("You module name")
 ---------------------------------------------------------------------------------------------------
 requisition libraries:
-pip install requests beautifulsoup4 requests
-
+pip install requests beautifulsoup4
