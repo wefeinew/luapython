@@ -19,3 +19,13 @@ Another option is to use the wluarun function, which allows you to run a Lua scr
 from luapython import wluarun
 
 wluarun("path/to/script.lua") Note that "path/to/script.lua" in the code snippets above should be replaced with the actual path to your Lua script file. It is important that it is not installed via pip, you need to safely add it to your project
+
+to install libs use module:
+
+from luapython import search_luarocks
+
+search_luarocks("You module name")
+---------------------------------------------------------------------------------------------------
+requisition libraries:
+pip install requests beautifulsoup4 requests
+
