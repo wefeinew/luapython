@@ -1,7 +1,7 @@
 import subprocess
 import os
 import requests
-from lupa import LuaRuntime
+import lupa
 from bs4 import BeautifulSoup
 
 print("LIB: Lua Python. By Pythonlua.org")
@@ -86,3 +86,7 @@ def luascriptcompilation(script_path, output_path):
 def wluarun(script_path, *args):
     lua_cmd = ['Lua/wlua.exe', script_path]
     return run_lua_script(lua_cmd, *args)
+
+def execute_lua_code(code):
+    lua = lupa.LuaRuntime()
+    lua.execute(code)
