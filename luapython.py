@@ -2,7 +2,7 @@ import subprocess
 import os
 import requests
 import lupa
-from bs4 import BeautifulSop
+from bs4 import BeautifulSoup
 
 print("LIB: Lua Python. By Pythonlua.org")
 
