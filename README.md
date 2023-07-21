@@ -25,6 +25,13 @@ to install libs use module:
 from luapython import search_luarocks
 
 search_luarocks("You module name")
+
+for execute lua code, but not have file:
+
+from luapython import luapy
+
+execute_lua_code('print("Hello from Lua Python!")')
+
 ---------------------------------------------------------------------------------------------------
 requisition libraries:
 pip install requests beautifulsoup4 luapy
