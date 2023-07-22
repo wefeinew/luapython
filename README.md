@@ -28,4 +28,4 @@ search_luarocks("You module name")
 
 ---------------------------------------------------------------------------------------------------
 requisition libraries:
-pip install requests beautifulsoup4 lupa
+pip install requests beautifulsoup4 lupa, ctypes
