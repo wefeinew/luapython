@@ -76,6 +76,7 @@ def luarun(script_path, *args):
     return run_lua_script(lua_cmd, *args)
 
 def luascriptcompilation(script_path, output_path):
+    output_path = os.path.splitext(output_path)[0] + ".out"  # Add ".out" extension
     lua_cmd = ['Lua/luac.exe', '-o', output_path, script_path]
     return run_lua_script(lua_cmd)
 
