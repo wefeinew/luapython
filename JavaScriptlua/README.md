@@ -1,3 +1,5 @@
+to use Lua in JavaScript file:
+
 const LuaModule = require('./LuaModule');
 
 const moduleInstance = new LuaModule('path to dll file LUA');
