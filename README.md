@@ -12,7 +12,7 @@ Alternatively, you can also use the luascriptcompilation function to compile a L
 
 from lua script utils import luascriptcompilation
 
-luascriptcompilation("output-script.out", "path/to/script.lua") This will compile the Lua script to bytecode and save it to the specified output file.
+luascriptcompilation("output-script", "path/to/script.lua") This will compile the Lua script to bytecode and save it to the specified output file.
 
 Another option is to use the wluarun function, which allows you to run a Lua script with better integration between Python and Lua, passing variables and data between them. Use the following code:
 
