@@ -1,0 +1,60 @@
+Lua Script Util (LIB) - Version 10.12.31
+This module provides utility functions for working with Lua scripts and LuaRocks.
+
+Functions
+run_lua_script(lua_cmd, *args)
+Executes a Lua script using the specified Lua interpreter command and optional arguments.
+
+lua_cmd (list): The command to execute the Lua script, including the Lua interpreter executable and any additional arguments.
+*args (str): Optional arguments to pass to the Lua script.
+Returns the output of the Lua script if it succeeds. Raises a RuntimeError if an error occurs while executing the Lua script.
+
+search_luarocks(query)
+Searches for LuaRocks modules using the specified query.
+
+query (str): The search query for LuaRocks modules.
+Downloads the first module found (if any) and saves it as a .rock file. Prints messages indicating the status of the search and download operations.
+
+lua_terminal()
+Opens a Lua terminal by executing the Lua interpreter command.
+
+get_lua_version()
+Returns the version of the Lua interpreter.
+
+Returns the Lua version as a string if the command succeeds. Raises a RuntimeError if an error occurs while executing the Lua interpreter command.
+
+luacreate(script_name)
+Creates an empty Lua script file with the specified name.
+
+script_name (str): The name of the Lua script file to create.
+If a file with the same name already exists, prompts the user for confirmation before overwriting it.
+
+luarun(script_path, *args)
+Runs a Lua script using the specified script file path and optional arguments.
+
+script_path (str): The path to the Lua script file to run.
+*args (str): Optional arguments to pass to the Lua script.
+Returns the output of the Lua script if it succeeds. Raises a RuntimeError if an error occurs while executing the Lua script.
+
+luascriptcompilation(script_path, output_path)
+Compiles a Lua script using the luac compiler.
+
+script_path (str): The path to the Lua script file to compile.
+output_path (str): The desired path for the compiled output file.
+Returns the output of the compilation process if it succeeds. Raises a RuntimeError if an error occurs while compiling the Lua script.
+
+wluarun(script_path, *args)
+Runs a Lua script using the wlua interpreter command.
+
+script_path (str): The path to the Lua script file to run.
+*args (str): Optional arguments to pass to the Lua script.
+Returns the output of the Lua script if it succeeds. Raises a RuntimeError if an error occurs while executing the Lua script.
+
+Dependencies
+This module requires the following dependencies:
+
+os module from the Python Standard Library
+requests library for making HTTP requests
+lupa library for embedding Lua in Python
+bs4 (BeautifulSoup) library for parsing HTML
+Make sure to install these dependencies before using the module.
