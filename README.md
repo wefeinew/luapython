@@ -1,4 +1,3 @@
-![Logo](https://i.ibb.co/GMxDGLf/logo.png)
 To include the "lua script utils" library in your project and use it in your code, do the following:
 
 First unzip the "lua script utils" library and place it in your project directory.
