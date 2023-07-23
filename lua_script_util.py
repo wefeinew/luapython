@@ -4,7 +4,7 @@ import requests
 import lupa
 from bs4 import BeautifulSoup
 
-print("LIB: Lua Python. By Pythonlua.org")
+print("LIB: Lua Script Util. Version: 10.12.31")
 
 def run_lua_script(lua_cmd, *args):
     result = subprocess.run(lua_cmd + list(args), capture_output=True, text=True, input=None if not args else '\n'.join(args))
