@@ -55,6 +55,5 @@ This module requires the following dependencies:
 
 os module from the Python Standard Library
 requests library for making HTTP requests
-lupa library for embedding Lua in Python
 bs4 (BeautifulSoup) library for parsing HTML
 Make sure to install these dependencies before using the module.
